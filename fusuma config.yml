@@ -45,7 +45,7 @@ threshold:
   pinch: .5
 
 interval:
-  swipe: 0.75
+  swipe: 1
   pinch: .075
 
 plugin: 
