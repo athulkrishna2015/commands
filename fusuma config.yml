@@ -21,12 +21,36 @@ swipe:
 pinch:
   2:
     in:
-       command: "xdotool keydown ctrl click 4 keyup ctrl" # Zoom in
+      command: 'xdotool keydown ctrl click 4 keyup ctrl' # Zoom in
     out:
-       command: "xdotool keydown ctrl click 5 keyup ctrl" # Zoom out
+      command: 'xdotool keydown ctrl click 5 keyup ctrl' # Zoom out
+  4:
+    in:
+      command: 'xdotool key super+a' # Window overview
+    out:
+      command: 'xdotool key super+s' # Workspace overview
+
+rotate:
+  2:
+    clockwise:
+      command: 'xdotool key XF86AudioRaiseVolume' # Volume up
+    counterclockwise:
+      command: 'xdotool key XF86AudioLowerVolume' # Volume down
+  3:
+    clockwise:
+      command: 'xdotool key XF86MonBrightnessUp' # Brightness up
+    counterclockwise:
+      command: 'xdotool key XF86MonBrightnessDown' # Brightness down
 threshold:
   pinch: .5
 
 interval:
   swipe: 0.75
-  pinch: .75
+  pinch: .075
+
+plugin: 
+  inputs:
+    libinput_command_input: # options for lib/plugin/inputs/libinput_command_input
+      enable-tap: true # click to tap
+      enable-dwt: true # disable tap while typing
+      show-keycodes: true # https://github.com/iberianpig/fusuma-plugin-keypress#add-show-keycode-option
