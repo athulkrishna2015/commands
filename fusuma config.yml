@@ -42,11 +42,11 @@ rotate:
     counterclockwise:
       command: 'xdotool key XF86MonBrightnessDown' # Brightness down
 threshold:
-  pinch: .5
+  pinch: .5  # if this value is low zoom will be so fast
 
 interval:
-  swipe: 1
-  pinch: .075
+  swipe: 1  #there will ne mutiple swipes in single swipe
+  pinch: .01  #if intervel is high pich get confuced with rotate
 
 plugin: 
   inputs:
