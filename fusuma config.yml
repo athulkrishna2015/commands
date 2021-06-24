@@ -1,0 +1,32 @@
+#~/.config/fusuma/config.yml
+swipe:
+  3:
+    right:
+      command: "xdotool key ctrl+alt+Right" # tile window to right
+    left:
+      command: "xdotool key ctrl+alt+Left" # tile window to left
+    up:
+      command: "xdotool key ctrl+alt+Up" # maximize
+    down:
+      command: "xdotool key ctrl+alt+Down" # minimize/hide
+  4:
+    left:
+      command: "xdotool key " # Switch to next workspace
+    right:
+      command: "xdotool key " # Switch to previous workspace
+    down:
+      command: "xdotool key ctrl+alt+D" # Show desktop
+    up:
+      command: "xdotool key ctrl+alt+Up" # Switch to previous workspace
+pinch:
+  2:
+    in:
+       command: "xdotool keydown ctrl click 4 keyup ctrl" # Zoom in
+    out:
+       command: "xdotool keydown ctrl click 5 keyup ctrl" # Zoom out
+threshold:
+  pinch: .5
+
+interval:
+  swipe: 0.75
+  pinch: .25
