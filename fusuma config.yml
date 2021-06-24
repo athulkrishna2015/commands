@@ -1,4 +1,4 @@
-#~/.config/fusuma/config.yml
+# Rename ~/.config/fusuma/config.yml
 swipe:
   3:
     right:
@@ -15,7 +15,7 @@ swipe:
     right:
       command: "xdotool key " # Switch to previous workspace
     down:
-      command: "xdotool key ctrl+alt+D" # Show desktop
+      command: "xdotool key ctrl+alt+d" # Show desktop
     up:
       command: "xdotool key ctrl+alt+Up" # Switch to previous workspace
 pinch:
