@@ -1,4 +1,5 @@
 # Rename ~/.config/fusuma/config.yml
+#auto start add /usr/bin/fusuma to start up apps
 swipe:
   3:
     right:
