@@ -10,5 +10,5 @@ start up `sh /home/$(USER)/.onedive.sh`
 ```
 #!/bin/sh
 sleep 3
-xrandr --output LVDS --brightness 0.9 --gamma 0.55
+rclone --vfs-cache-mode writes mount onedrive: ~/onedrive
 ```
