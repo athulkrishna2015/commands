@@ -2,13 +2,12 @@
 
 `rclone --vfs-cache-mode writes mount onedrive: ~/onedrive` 
 
-to mount
+to mount at startup
 
-start up `sh /home/$(USER)/.onedive.sh`
-
-
+create  `/home/$(USER)/.onedive.sh` give excute permission 
 ```
 #!/bin/sh
 sleep 3
 rclone --vfs-cache-mode writes mount onedrive: ~/onedrive
 ```
+add `sh /home/$(USER)/.onedive.sh` to start up application  
