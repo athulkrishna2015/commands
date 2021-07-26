@@ -21,4 +21,27 @@ do if [[ "$n" =~ -[-_0-9a-zA-Z]{11}.mp3$ ]]
    fi
 done
 ```
+# Youtube-dl being throttled?
+It used to download very fast 3.5MB/s, now it hangs for a few seconds and then downloads at only 75KBs.
 
+Also seems to happen when you load the file url in Firefox, and then save it from FF.
+
+i.e Youtube-dl -g -f 140 videourl (gives the direct url of the m4a audio) - paste url into FF, same slow speed.
+
+So I guess it's not just Youtube-dl.
+
+EDIT
+This should work for Windows users, maxes out my connection for the most part.
+https://chocolatey.org/packages/aria2
+
+`youtube-dl VideoUrl -f 140 --external-downloader aria2c --external-downloader-args "-j 8 -s 8 -x 8 -k 5M"`
+Replace 140 with chosen format.
+.
+
+For larger files "-j 12 -s 12 -x 12 -k 5M" may work better . Try 12 or 16
+
+Works with other options too i.e
+
+`youtube-dl -f bestaudio[ext=m4a] --external-downloader aria2c --external-downloader-args "-j 8 -s 8 -x 8  
+-k 5M" --restrict-filenames -o "%%(title)s.%%(ext)s" --postprocessor-args "-ar 44100 -ac 1" --add-  
+metadata --embed-thumbnail --playlist-items 1 https://www.youtube.com/playlist?list=PlaylistID`
