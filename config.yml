@@ -1,4 +1,5 @@
 # Rename ~/.config/fusuma/config.yml
+# For KDE Plasma
 #auto start add /usr/bin/fusuma to start up apps
 swipe:
   3:
