@@ -52,7 +52,7 @@ or
 
 There is an option, [clearly mentioned in the documention][1]:
 
-#Subtitle Options:
+Subtitle Options:
 -----------------
 
     --write-sub                      Write subtitle file
