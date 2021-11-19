@@ -50,3 +50,24 @@ or
 
 `youtube-dl -f best --external-downloader aria2c --external-downloader-args "-j 16 -x 16 -s 16 -k 1M" https://www.youtube.com/watch?v=blablablabla1 `
 
+There is an option, [clearly mentioned in the documention][1]:
+
+#Subtitle Options:
+-----------------
+
+    --write-sub                      Write subtitle file
+    --write-auto-sub                 Write automatic subtitle file (YouTube only)
+    --all-subs                       Download all the available subtitles of the video
+    --list-subs                      List all available subtitles for the video
+    --sub-format FORMAT              Subtitle format, accepts formats preference, for example: "srt" or "ass/srt/best"
+    --sub-lang LANGS                 Languages of the subtitles to download (optional) separated by commas, use IETF language tags like 'en,pt'
+
+So for example, to list all subs for a video:
+
+    youtube-dl --list-subs https://www.youtube.com/watch?v=Ye8mB6VsUHw
+
+To download all subs, but not the video:
+
+    youtube-dl --all-subs --skip-download https://www.youtube.com/watch?v=Ye8mB6VsUHw
+
+  [1]: https://github.com/rg3/youtube-dl/#subtitle-options
