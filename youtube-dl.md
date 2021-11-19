@@ -48,5 +48,5 @@ metadata --embed-thumbnail --playlist-items 1 https://www.youtube.com/playlist?l
 
 or 
 
-youtube-dl -f best --external-downloader aria2c --external-downloader-args "-j 16 -x 16 -s 16 -k 1M" https://www.youtube.com/watch?v=blablablabla1 
+`youtube-dl -f best --external-downloader aria2c --external-downloader-args "-j 16 -x 16 -s 16 -k 1M" https://www.youtube.com/watch?v=blablablabla1 `
 
