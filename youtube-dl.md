@@ -45,3 +45,8 @@ Works with other options too i.e
 `youtube-dl -f bestaudio[ext=m4a] --external-downloader aria2c --external-downloader-args "-j 8 -s 8 -x 8  
 -k 5M" --restrict-filenames -o "%%(title)s.%%(ext)s" --postprocessor-args "-ar 44100 -ac 1" --add-  
 metadata --embed-thumbnail --playlist-items 1 https://www.youtube.com/playlist?list=PlaylistID`
+
+or 
+
+youtube-dl -f best --external-downloader aria2c --external-downloader-args "-j 16 -x 16 -s 16 -k 1M" https://www.youtube.com/watch?v=blablablabla1 
+
