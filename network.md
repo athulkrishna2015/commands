@@ -1,0 +1,2 @@
+journalctl -f -u NetworkManager
+
