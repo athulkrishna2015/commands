@@ -19,7 +19,8 @@ sudo pacman-mirrors -f0 && sudo pacman -Syyu
 To fix the error I ran the same steps as before:
 
 ```sudo rm -R /var/lib/pacman/sync
-sudo pacman -Syy```
+sudo pacman -Syy
+```
 and deleted the temporary files of pamac via
 
-```sudo rm -rf /tmp/pamac```
+`sudo rm -rf /tmp/pamac`
