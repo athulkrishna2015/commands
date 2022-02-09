@@ -16,3 +16,10 @@ warning: too many errors from ftp.vectranet.pl, skipping for the remainder of th
 ```
 sudo pacman-mirrors -f0 && sudo pacman -Syyu
 ```
+To fix the error I ran the same steps as before:
+
+```sudo rm -R /var/lib/pacman/sync
+sudo pacman -Syy```
+and deleted the temporary files of pamac via
+
+```sudo rm -rf /tmp/pamac```
