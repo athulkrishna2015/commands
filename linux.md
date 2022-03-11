@@ -23,7 +23,9 @@ sudo pacman -Syy
 ```
 and deleted the temporary files of pamac via
 
-```sudo rm -rf /tmp/pamac```
+`
+sudo rm -rf /tmp/pamac
+`
 
 Looks like your local signatures are expired and/or invalid and are preventing you from installing the keyring and gnupg packages.
 
