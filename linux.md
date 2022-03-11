@@ -50,3 +50,23 @@ sudo pacman -Syy gnupg archlinux-keyring manjaro-keyring --ignore manjaro-system
 sudo mv -f "/etc/pacman.conf.orig" "/etc/pacman.conf"
 sudo pacman -Syu
 ```
+Open the file `/etc/pacman.conf` in a terminl editor (nano, micro, vi) and locate the following section
+
+# By default, pacman accepts packages signed by keys that its local keyring
+# trusts (see pacman-key and its man page), as well as unsigned packages.
+SigLevel    = Required DatabaseOptional
+LocalFileSigLevel = Optional
+#RemoteFileSigLevel = Required
+Change the SigLevel to
+
+....
+`SigLevel    = Required DatabaseNever`
+....
+Remove the files in /var/lib/pacman/sync - they will be fetched as necessary
+```
+sudo rm -f /var/lib/pacman/sync/*
+```
+Change mirror
+```
+sudo pacman-mirrors --continent
+```
