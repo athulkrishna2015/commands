@@ -24,3 +24,27 @@ sudo pacman -Syy
 and deleted the temporary files of pamac via
 
 `sudo rm -rf /tmp/pamac`
+
+Looks like your local signatures are expired and/or invalid and are preventing you from installing the keyring and gnupg packages.
+
+It’s kind-of a catch-22: the local signatures need to be updated to function, but the signatures on the packages containing the required updates don’t match any valid local ones, and thus are prevented from installing.
+
+The fix is simple, but a bit of a security risk. The signatures are there to protect you against MITM (man in the middle) attacks. However, in order to install the new signatures in your system’s current state, you’ll need to temporarily disable those checks.
+
+(@Wollie , let us know if there’s a better way to do this, as I’d be interested in an alternative)
+
+The 5 lines of code below should resolve the issue. They essentially do the following:
+
+backup current pacman.conf
+turn off all signature checks
+download/install gnupg and keyring packages (ignore manjaro-system updates for now)
+restore original pacman.conf settings (which turns signature checks back on)
+update system
+(If any of the below commands fail, please post the output here and do not continue.)
+```
+sudo cp -f "/etc/pacman.conf" "/etc/pacman.conf.orig"
+sudo sed -i 's/SigLevel.*/SigLevel = Never/' /etc/pacman.conf
+sudo pacman -Syy gnupg archlinux-keyring manjaro-keyring --ignore manjaro-system
+sudo mv -f "/etc/pacman.conf.orig" "/etc/pacman.conf"
+sudo pacman -Syu
+```
