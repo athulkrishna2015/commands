@@ -50,6 +50,9 @@ sudo pacman -Syy gnupg archlinux-keyring manjaro-keyring --ignore manjaro-system
 sudo mv -f "/etc/pacman.conf.orig" "/etc/pacman.conf"
 sudo pacman -Syu
 ```
+
+(l)[https://forum.manjaro.org/t/root-tip-mitigate-and-prevent-gpgme-error-when-syncing-your-system/84700]
+
 Open the file `/etc/pacman.conf` in a terminl editor (nano, micro, vi) and locate the following section
 
 # By default, pacman accepts packages signed by keys that its local keyring
