@@ -51,7 +51,7 @@ sudo mv -f "/etc/pacman.conf.orig" "/etc/pacman.conf"
 sudo pacman -Syu
 ```
 
-(https://forum.manjaro.org/t/root-tip-mitigate-and-prevent-gpgme-error-when-syncing-your-system/84700)[s]
+(https://forum.manjaro.org/t/root-tip-mitigate-and-prevent-gpgme-error-when-syncing-your-system/84700)
 
 Open the file `/etc/pacman.conf` in a terminl editor (nano, micro, vi) and locate the following section
 
