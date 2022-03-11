@@ -51,12 +51,12 @@ sudo mv -f "/etc/pacman.conf.orig" "/etc/pacman.conf"
 sudo pacman -Syu
 ```
 
-(https://forum.manjaro.org/t/root-tip-mitigate-and-prevent-gpgme-error-when-syncing-your-system/84700)
+<https://forum.manjaro.org/t/root-tip-mitigate-and-prevent-gpgme-error-when-syncing-your-system/84700>
 
 Open the file `/etc/pacman.conf` in a terminl editor (nano, micro, vi) and locate the following section
 
 # By default, pacman accepts packages signed by keys that its local keyring
-# trusts (see pacman-key and its man page), as well as unsigned packages.
+ trusts (see pacman-key and its man page), as well as unsigned packages.
 SigLevel    = Required DatabaseOptional
 LocalFileSigLevel = Optional
 #RemoteFileSigLevel = Required
