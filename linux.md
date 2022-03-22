@@ -63,12 +63,9 @@ LocalFileSigLevel = Optional
 ```
 Change the SigLevel to
 
-SigLevel    = Required DatabaseNever
+`SigLevel    = Required DatabaseNever`
 
-Remove the files in 
-```
-/var/lib/pacman/sync 
-```
+Remove the files in ` /var/lib/pacman/sync `
 - they will be fetched as necessary
 ```
 sudo rm -f /var/lib/pacman/sync/*
